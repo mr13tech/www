@@ -2,7 +2,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Twitter, GitHub, Mail } from 'react-feather'
+import { Twitter, GitHub, Mail, Linkedin } from 'react-feather'
 
 import { getTimeDiff } from '@/utils/timeDiff'
 
@@ -29,11 +29,11 @@ export const About = () => {
         <div className='text-2xl'> {'Pylyp Radionov'} </div>
         <div className='text-xl'> {'mr13tech'} </div>
         <article className='prose text-white lg:prose-xl'>
-          <div className='divider' />
+          <div className='divider m-0' />
           <p>{'skills: software engineer'}</p>
           <p>{'origin: 🇺🇦 UA 🌊 Odesa'}</p>
           <p>{`locale: 🇹🇭 TH 🌐 ${userTimeDiff ?? '?h'} from You`}</p>
-          <p>{'mypath: family, ⛓️ and freedom'}</p>
+          <p>{'mypath: family, ⛓️ peers, freedom'}</p>
         </article>
 
         <p />
@@ -61,6 +61,14 @@ export const About = () => {
             rel='external noopener noreferrer'
           >
             <Mail />
+          </a>
+          <a
+            className='btn-link btn'
+            href='https://www.linkedin.com/in/mr13tech/'
+            target='_blank'
+            rel='external noopener noreferrer'
+          >
+            <Linkedin />
           </a>
         </div>
       </div>
