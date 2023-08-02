@@ -4,6 +4,7 @@ import { About } from '@/components/about'
 import { Nav } from '@/components/nav'
 import { History } from '@/components/history'
 import { LinkState, useNavStore } from '@/app/store'
+import { TBD } from '@/components/tbd'
 
 const Home = () => {
   const activeLink = useNavStore((state) => state.activeLink)
@@ -22,20 +23,20 @@ const Home = () => {
           {
             logoSrc: '0xkyc-logo.png',
             title: '0xKYC',
-            text: "created during ETH WARSAW 2022' hackathon. Helped to go throu startup cohort. Consult with system architecture. Performed smart contract audit.",
+            text: "created @ ETH WARSAW 2022' hackathon. Helped to go throu startup cohort. Consult with system architecture. Performed smart contract audit.",
             link: 'https://0xKYC.id/',
           },
           {
             logoSrc: 'unid-store-logo.png',
             title: 'unid.store',
-            text: 'decentralized file sharing created during HACKFS 2023 by ETHGlobal. 🥇 IPFS — Best Use',
+            text: 'decentralized file sharing @ HACKFS 23 by ETHGlobal IPFS — Best Use 🥇',
             link: 'https://unid.store/',
           },
         ]}
       />
     ),
-    past: <></>,
-    future: <></>,
+    past: <TBD />,
+    future: <TBD />,
   }
   return (
     <div>
