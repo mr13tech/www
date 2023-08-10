@@ -14,3 +14,9 @@ export const getTimeDiff = () => {
 
   return timeDifferenceHours
 }
+
+export const getTimeDiffLabel = () => {
+  const timeDiff = getTimeDiff().toString() + 'h'
+  const isNegative = timeDiff.startsWith('-')
+  return isNegative ? timeDiff : `+${timeDiff}`
+}

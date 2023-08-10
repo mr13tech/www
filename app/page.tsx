@@ -1,17 +1,17 @@
 'use client'
 
+import { navState, Nav, useNavStore } from '@/components/nav'
 import { About } from '@/components/about'
-import { Nav } from '@/components/nav'
 import { History } from '@/components/history'
-import { LinkState, useNavStore } from '@/app/store'
 import { TBD } from '@/components/tbd'
+import { Footer } from '@/components/footer'
 
 const Home = () => {
-  const activeLink = useNavStore((state) => state.activeLink)
+  const activeState = useNavStore((state) => state.state)
 
-  const map: Record<LinkState, JSX.Element> = {
-    about: <About />,
-    present: (
+  const map: Record<navState, JSX.Element> = {
+    About: <About />,
+    Present: (
       <History
         points={[
           {
@@ -35,14 +35,15 @@ const Home = () => {
         ]}
       />
     ),
-    past: <TBD />,
-    future: <TBD />,
+    Past: <TBD />,
+    Future: <TBD />,
   }
   return (
-    <div>
+    <>
       <Nav />
-      {map[activeLink]}
-    </div>
+      {map[activeState]}
+      <Footer />
+    </>
   )
 }
 export default Home
