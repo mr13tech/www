@@ -12,27 +12,21 @@ type HistoryProps = {
 }
 
 export const History = ({ points: historyPoints }: HistoryProps) => (
-  <article className='prose text-white lg:prose-xl'>
-    <div className='flex flex-col items-center justify-center space-y-6 rounded-2xl bg-accent-content px-4'>
-      {historyPoints.map((point, index) => (
-        <Link
-          key={index}
-          href={point.link}
-          target='_blank'
-          rel='noreferrer'
-          className='flex w-full items-center rounded-xl no-underline transition-all duration-300 ease-in-out hover:bg-gray-300 hover:bg-opacity-10'
-        >
-          <img
-            src={point.logoSrc}
-            alt={point.logoSrc}
-            className='w-1/4 flex-shrink-0 object-contain'
-          />
-          <div className='flex-1 pl-4 text-left'>
-            <h3 className='xl'>{point.title}</h3>
-            <p>{point.text}</p>
-          </div>
-        </Link>
-      ))}
-    </div>
-  </article>
+  <div className='flex flex-col gap-4 lg:flex-row'>
+    {historyPoints.map((point, index) => (
+      <Link
+        key={index}
+        href={point.link}
+        target='_blank'
+        rel='noreferrer'
+        className='flex w-full max-w-[588px] flex-col items-start justify-start  gap-8  rounded-3xl bg-black p-6 hover:bg-gray-300 hover:bg-opacity-10 lg:max-w-[330px]'
+      >
+        <img src={point.logoSrc} alt={point.logoSrc} className='' />
+        <div className='flex-1 pl-4 text-left'>
+          <p className='text-3xl'>{point.title}</p>
+          <p className='text-sm lg:text-base'>{point.text}</p>
+        </div>
+      </Link>
+    ))}
+  </div>
 )

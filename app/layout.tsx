@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={mono.className}>
-        <div className='flex min-h-screen flex-col bg-primary-content p-2 lg:items-center lg:justify-center lg:p-0'>
+        <div className='flex min-h-screen flex-col items-center justify-center gap-4 bg-zinc-900 px-2'>
           {children}
         </div>
       </body>

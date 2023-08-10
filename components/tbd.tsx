@@ -47,11 +47,11 @@ export const TBD = () => {
   }, [balls])
 
   return (
-    <div className='flex min-h-screen flex-wrap items-center justify-center rounded-2xl bg-accent-content px-6 pt-10 transition-all duration-300 ease-in-out lg:h-[512px] lg:w-[1000px]'>
+    <div className='flex min-h-screen flex-wrap items-center justify-center rounded-2xl bg-black px-6 pt-10 transition-all duration-300 ease-in-out lg:h-[512px] lg:w-[1000px]'>
       {Array.from({ length: currentBalls }, (_, index) => (
         <span
           key={index}
-          className='items- loading loading-ball loading-lg m-2 h-12 w-12'
+          className='items- loading loading-ball loading-lg m-2 h-12'
         />
       ))}
     </div>
