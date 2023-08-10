@@ -28,7 +28,7 @@ const avatar = (
     </div>
 
     <img
-      className='rounded-3xl lg:hidden'
+      className='grow rounded-3xl lg:hidden'
       src='images/me.mr13.mobile.png'
       alt='me.mr13.mobile.png?'
     />
