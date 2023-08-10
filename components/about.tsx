@@ -5,7 +5,7 @@ import { getTimeDiffLabel } from '@/utils/timeDiff'
 
 export const About = () => {
   return (
-    <div className='flex w-full max-w-[588px] flex-col gap-4'>
+    <div className='flex w-full max-w-[588px] flex-col gap-4 lg:max-w-[1024px]'>
       <div className='flex flex-col gap-4 lg:flex-row'>
         {avatar}
         {personal}
