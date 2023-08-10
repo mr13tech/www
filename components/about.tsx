@@ -98,7 +98,7 @@ const skills = (
         </div>
         <div className='flex h-[204px] flex-col items-start justify-start gap-4 self-stretch'>
           <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 1
+            EVM SOlidity Hardhat\Foundry C\C++
           </div>
           <div className='self-stretch text-lg font-medium leading-7 text-white'>
             Skill 2
