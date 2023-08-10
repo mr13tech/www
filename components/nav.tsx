@@ -21,7 +21,7 @@ export const Nav = () => {
   const activeState = useNavStore((state) => state.state)
   const handleStateChange = (newState: navState) => set(newState)
   return (
-    <div className='mt-2 flex  h-[64px] w-full max-w-[320px] items-center justify-start gap-2 rounded-3xl bg-black px-2.5 text-sm font-medium lg:max-w-[1024px] lg:text-xl'>
+    <div className='mt-2 flex  h-[64px] w-full max-w-[588px] items-center justify-start gap-2 rounded-3xl bg-black px-2.5 text-sm font-medium lg:max-w-[1024px] lg:text-xl'>
       {NavStates.map((state) => (
         <div key={state} className='px-2'>
           <div

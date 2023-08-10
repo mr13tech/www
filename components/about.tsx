@@ -24,7 +24,7 @@ const avatar = (
     </div>
 
     <div className='absolute inset-0 flex items-center justify-center'>
-      <img src='/images/focus.svg' />
+      <img src='images/focus.svg' alt='images/focus.svg?' />
     </div>
 
     <img
@@ -64,79 +64,43 @@ const personal = (
 )
 
 const skills = (
-  <div className='flex flex-col items-start justify-start gap-4 lg:flex-row'>
-    <div className='flex items-start justify-start gap-6 self-stretch rounded-3xl bg-black p-6 lg:w-[244px]'>
-      <div className='flex shrink grow basis-0 flex-col items-start justify-start gap-7'>
-        <div className='flex flex-col items-start justify-start gap-3'>
-          <div className='text-center text-base font-medium text-white text-opacity-50'>
-            Skill
-          </div>
-          <div className='text-center text-2xl font-medium text-white'>Web</div>
-        </div>
-        <div className='flex h-[116px] flex-col items-start justify-start gap-4 self-stretch'>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 1
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 2
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 3
-          </div>
-        </div>
-      </div>
+  <div className='flex flex-col gap-4 lg:flex-row'>
+    <div className='flex w-full flex-col items-start  justify-start  gap-4 rounded-3xl bg-black p-4 text-start text-sm font-medium leading-7 text-white lg:w-[244px] lg:text-xl'>
+      <p className='opacity-50'>{'Skill'}</p>
+      <p className='pb-[28px] pt-3 text-2xl'> Code </p>
+      <p>C/C++, Python, Solidity</p>
+      <p>JS\TS, Nextjs, Tailwind</p>
+      <p>CI\CD, Cloud, Databases</p>
+      <p>Unix, Git, Docker</p>
     </div>
-    <div className='inline-flex items-start justify-start gap-6 self-stretch rounded-3xl bg-black p-6 lg:w-[504px]'>
-      <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-7'>
-        <div className='flex flex-col items-start justify-start gap-3'>
-          <div className='text-center text-base font-medium text-white text-opacity-50'>
-            Skill
-          </div>
-          <div className='text-center text-2xl font-medium text-white'>
-            🏆 Web3
-          </div>
-        </div>
-        <div className='flex h-[204px] flex-col items-start justify-start gap-4 self-stretch'>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            EVM SOlidity Hardhat\Foundry C\C++
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 2
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 3
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 4
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 5
-          </div>
-        </div>
-      </div>
+    <div className='flex w-full flex-col items-start  justify-start  gap-4 rounded-3xl bg-black p-4 text-start text-sm font-medium leading-7 text-white lg:w-[504px] lg:text-xl'>
+      <p className='opacity-50'>{'Skill'}</p>
+      <p className='pb-[28px] pt-3 text-2xl font-medium '>🏆 Web3</p>
+      <p>
+        <span className='opacity-50'>_0</span>: ETH, OP, MATIC, ARB, BTC
+      </p>
+      <p>
+        <span className='opacity-50'>_1:</span> ethers, oz, hardhat, foundry
+      </p>
+      <p>
+        <span className='opacity-50'>_2:</span> ipfs, ens, thegraph
+      </p>
+      <p>
+        <span className='opacity-50'>_3:</span> mythx, diligence, solhint
+      </p>
+      <p>
+        <span className='opacity-50'>_4:</span> mm, walletconnect, gnosis
+      </p>
+      <p>
+        <span className='opacity-50'>_5:</span> opensea, uniswap, aave
+      </p>
     </div>
-    <div className='inline-flex items-start justify-start gap-6 self-stretch rounded-3xl bg-black p-6 lg:w-[244px]'>
-      <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-7'>
-        <div className='flex flex-col items-start justify-start gap-3'>
-          <div className='text-center text-base font-medium text-white text-opacity-50'>
-            Skill
-          </div>
-          <div className='text-center text-2xl font-medium text-white'>
-            Java
-          </div>
-        </div>
-        <div className='flex h-[116px] flex-col items-start justify-start gap-4 self-stretch'>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 1
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 2
-          </div>
-          <div className='self-stretch text-lg font-medium leading-7 text-white'>
-            Skill 3
-          </div>
-        </div>
-      </div>
+    <div className='flex w-full flex-col items-start  justify-start  gap-4 rounded-3xl bg-black p-4 text-start text-sm font-medium leading-7 text-white lg:w-[244px] lg:text-xl'>
+      <p className='opacity-50'>{'Skill'}</p>
+      <p className='pb-[28px] pt-3 text-2xl'> Communication</p>
+      <p>Present</p>
+      <p>Team Lead</p>
+      <p>Plan & Estimate</p>
     </div>
   </div>
 )
