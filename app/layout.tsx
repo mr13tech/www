@@ -1,8 +1,8 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
+import './globals.css'
 
-const mono = Roboto_Mono({
+const robotoMono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-roboto-mono',
@@ -13,10 +13,14 @@ export const metadata: Metadata = {
   description: 'me story and me projects',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en">
-      <body className={mono.className}>
+      <body className={robotoMono.className}>
         <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-zinc-900 px-2">
           {children}
         </div>

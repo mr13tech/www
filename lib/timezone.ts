@@ -1,4 +1,4 @@
-export const getTimeDiff = () => {
+export const getTimeDiff = (): number => {
   // Get the current date in the user's timezone
   const currentDate = new Date()
 
@@ -14,7 +14,7 @@ export const getTimeDiff = () => {
   return timeDifferenceHours
 }
 
-export const getTimeDiffLabel = () => {
+export const getTimeDiffLabel = (): string => {
   const timeDiff = getTimeDiff().toString() + 'h'
   const isNegative = timeDiff.startsWith('-')
   return isNegative ? timeDiff : `+${timeDiff}`

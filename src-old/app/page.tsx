@@ -7,7 +7,7 @@ import { TBD } from '@/components/tbd'
 import { Footer } from '@/components/footer'
 
 const Home = () => {
-  const activeState = useNavStore((state) => state.state)
+  const activeState = useNavStore(state => state.state)
 
   const map: Record<navState, JSX.Element> = {
     About: <About />,
