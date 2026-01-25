@@ -27,7 +27,7 @@ export const Nav = () => {
           <div
             className={
               activeState === state
-                ? 'bg-gradient-to-t from-[#B3D574] to-[#24B391] bg-clip-text  text-transparent'
+                ? 'bg-linear-to-t from-[#B3D574] to-[#24B391] bg-clip-text  text-transparent'
                 : 'bg-clip-text text-transparent text-white text-opacity-50 '
             }
             onClick={() => handleStateChange(state)}
