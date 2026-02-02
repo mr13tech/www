@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
+import { CustomCursor } from '@/components/cursor'
+import { StickyContact } from '@/components/sticky-contact'
 import './globals.css'
 
 const robotoMono = Roboto_Mono({
@@ -9,8 +11,9 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'mr13tech personal d website',
-  description: 'me story and me projects',
+  title: 'Pylyp Radionov - Full Stack Web3 Engineer',
+  description:
+    'Software engineer specialized in blockchain, smart contracts, and Web3. Portfolio showcasing experience in DeFi, chain data ETL, and technical leadership.',
 }
 
 export default function RootLayout({
@@ -19,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={robotoMono.className}>
-        <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-zinc-900 px-2">
-          {children}
-        </div>
+    <html lang="en" className="h-full overflow-hidden">
+      <body className={`${robotoMono.className} h-full overflow-hidden bg-zinc-950`}>
+        <CustomCursor />
+        {children}
+        <StickyContact />
       </body>
     </html>
   )

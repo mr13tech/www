@@ -1,30 +1,19 @@
-'use client'
-
-import { useState } from 'react'
-import type { TabName } from '@/types'
-import type { ReactNode } from 'react'
-import { Navigation } from '@/components/navigation'
-import { Footer } from '@/components/footer'
-import { AboutSection } from '@/components/sections/about'
-import { PresentSection } from '@/components/sections/present'
-import { PastSection } from '@/components/sections/past'
-import { FutureSection } from '@/components/sections/future'
+import { HeroSection } from '@/components/sections/hero'
+import { ImpactSection } from '@/components/sections/impact'
+import { ExperienceSection } from '@/components/sections/experience'
+import { EducationSection } from '@/components/sections/education'
+import { SkillsSection } from '@/components/sections/skills'
+import { ContactSection } from '@/components/sections/contact'
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<TabName>('About')
-
-  const sections: Record<TabName, ReactNode> = {
-    About: <AboutSection />,
-    Present: <PresentSection />,
-    Past: <PastSection />,
-    Future: <FutureSection />,
-  }
-
   return (
-    <>
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
-      {sections[activeTab]}
-      <Footer />
-    </>
+    <div className="h-full w-full overflow-y-auto overflow-x-hidden snap-y snap-mandatory scrollbar-hide">
+      <HeroSection />
+      <ImpactSection />
+      <ExperienceSection />
+      <EducationSection />
+      <SkillsSection />
+      <ContactSection />
+    </div>
   )
 }

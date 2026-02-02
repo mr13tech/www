@@ -1,0 +1,98 @@
+export interface SkillCategory {
+  id: string
+  name: string
+  icon: string
+  description?: string
+  skills: string[]
+}
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: 'web3-blockchain',
+    name: 'Web3 & Blockchain',
+    icon: 'Zap',
+    description: 'Smart contracts, DeFi, chain data, cryptography',
+    skills: [
+      'Solidity',
+      'Hardhat',
+      'Foundry',
+      'Viem',
+      'Ethers.js',
+      'Smart Contracts',
+      'ERC Standards',
+      'DeFi',
+      'Zero-Knowledge Proofs',
+      'Ethereum',
+      'Optimism',
+      'Polygon',
+      'Arbitrum',
+      'Bitcoin',
+      'IPFS',
+      'Filecoin',
+      'The Graph',
+      'Circom',
+    ],
+  },
+  {
+    id: 'languages-frameworks',
+    name: 'Languages & Frameworks',
+    icon: 'Code2',
+    description: 'Programming languages and web frameworks',
+    skills: [
+      'TypeScript',
+      'JavaScript',
+      'Python',
+      'Golang',
+      'Rust',
+      'C/C++',
+      'Java',
+      'Scala',
+      'React',
+      'Next.js',
+      'Node.js',
+      'TailwindCSS',
+      'ShadCN',
+    ],
+  },
+  {
+    id: 'data-infrastructure',
+    name: 'Data & Infrastructure',
+    icon: 'Database',
+    description: 'Chain data ETL, databases, DevOps',
+    skills: [
+      'ETL Pipelines',
+      'SQL',
+      'Neo4j',
+      'Hadoop',
+      'MapR',
+      'BigQuery',
+      'Docker',
+      'GCP',
+      'Firebase',
+      'Subgraph',
+      'Analytics',
+      'Unix',
+      'Git',
+      'CI/CD',
+    ],
+  },
+  {
+    id: 'product-leadership',
+    name: 'Product & Leadership',
+    icon: 'Users2',
+    description: 'Team lead, project management, design',
+    skills: [
+      'Tech Lead',
+      'Team Management',
+      'Project Management',
+      'Product Development',
+      'Figma',
+      'UI/UX Design',
+      'Communication',
+      'Collaboration',
+      'Stakeholder Management',
+      'Architecture Design',
+      'Mentoring',
+    ],
+  },
+]

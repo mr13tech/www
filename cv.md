@@ -1,102 +1,116 @@
-Pylyp Radionov
-me@mr13.tech
-Family, peers, freedom.
-In 2017ish I was amazed by ethere
-um, since then it had been focus. Nowadays I am open for next steps in new
-realms but biggest preference is to combine web3, big data and AI and cooperation;
-Main experience of mine is chain data ETL, smart contracts development and tech lead. I got two places: coinfirm
-and copernicspace
-. Both in startup up environment, with a lot of responsibilites, proactive initiatives and tons
-of fun! And on the side I was participating in hackathons by ethglobal and some others. Also been consulting to
-bootstrap other startups
-blockchains, smart contracts, decentralized storage, chain data etl, analytics, big data
-cryptography, zero-knowledge proofs, privacy
-project management, product development, design, figma, communication, collaboration.
-chain nodes operation, Unix, databases
-Solidity, hardhat, foundry, viem, ethers.js
-C/C+
-+, Java, Golang, Python, Rust
-JS/TS, node, React/Next, TailwindCSS, ShadCN
-Copernic Space
-Jan 2024 – Present : Contractor
-Jan 2021 – Jan 2024: CTO
-build a marketplace designed for the space industry with web3 engine. My role involved both technical leadership
-and strategic planning related to any domains. At this project my role was to manage daily tech team and make
-sure we are on track. Crafting architecture docs was big part also, always evolving and making sure all team is
-on the same page.
-K
-ey Achievements:
-Smart Contracts:
-ERC-1155 based tokens to represent tangible space real world assets.
-custom token recursive parent and naming relationships
-factory pattern for deploying new assets
-gas optimised EVM codebase with unit and fuzz testings coverage
-marketplace contracts enabling listing creation and asset management.
-Data Infrastructure:
-Developed a Subgraph chain data indexer.
-Integrated IPFS/Filecoin for decentralized metadata and file storage.
-internal infrastrucutre on GCP and web3 for products services
-User Experience:
-Set up Firebase for user profiles and SIWE JWT authentication.
-Built the web client using React and Next.js.
-Responsibilities:
-Managed daily tech team operations methodologies to streamline tasks and maintain alignment.
-Developed technical documentation and outlined product roadmaps.
-Worked with stakeholders and clients to refine project goals and milestones.
-Created workflows and UI prototypes in Figma to support the development process.
-Coordinated tasks and ensured the tech team stayed on schedule and aligned with objectives.
-Shifted to a contractor role as the project moved into its next funding stage.
-Zee
-Kaptcha
-Jan 2024 – Mar 2024
-Worked on an open-source zero-knowledge protocol to verify CAPTCHA-based zkProofs on-chain. Developed Circom
-circuits and implemented a Golang backend to manage captchas.
-Coinfirm
-Apr 2017 – Dec 2020: Software Engineer
-Contributed to blockchain analytics and data engineering, focusing on efficient transaction mapping and ETL
-systems.
-K
-ey Achievements:
-Designed ETL pipelines for various blockchain networks, including:
-UTXO-based chains (e.g., BTC, LTC, BCH, Dash).
-Ethereum Mainnet.
-Stellar, Ripple, NEO, and others.
-Built scalable solutions for:
-SQL-based transaction analysis.
-Graph databases with Neo4j.
-Big Data platforms using Hadoop and MapR.
-Broadened expertise in smart contract development and Scala for big data analytics.
-Gained hands-on experience in DevOps tasks like node operations and system scalability.
-Outcome:
-Delivered a durable ETL framework that continues to support multiple blockchain networks.
-Hackathons
-12h.finance
-@StarkHack (ETHGlobal)
-Jun 2024
-Participated in an online hackathon, creating a project that used RWA collateral from traditional stock markets
-to enable crypto borrowing.
-even.cost @Superhack (ETHGlobal)
-Aug 2023
-Built a GDA investment dApp during a hackathon.
-unid
-.store
-@HackFS (ETHGlobal)
-Aug 2023
-Awarded: IPFS Best Use
-Created a decentralized file-sharing application leveraging Filecoin and IPFS.
-0xKYC @ETHWarsaw
-Sep 2022
-Co-founded and served as CTO for a project launched during a hackathon. It later joined a VC accelerator program.
-I supported product development and helped secure pre-seed funding. Transitioned to a consulting role after
-stepping down as co-founder. The project has since concluded.
-Green Team whacked blocks @ Warsaw 2018
-ethwarsaw 2017 hackathon with Coinfirm team
-Firelabs (Software House)
-May 2021 – Aug 2021
-Role: Tech Team Lead
-Led a team of five engineers to deliver a Web3 mirror trading application for an external client.
-Responsibilities:
-Defined deliverables and structured workflows for the team.
-Conducted feasibility studies and clarified requirements with the client.
-Provided accurate project estimates and ensured timely delivery.
-Utilized Golang and React as the primary tech stack.
+# Pylyp Radionov **Fullstack Engineer**
+Remote (Europe & SEA Timezones) 
+[me@mr13.tech](mailto:me@mr13.tech) 
+linkedin.com/in/mr13tech/ 
+github.com/mr13tech
++380932610010 (telegram, whatsapp, signal)
+---
+
+Fullstack engineer with 7+ years building at the intersection of blockchain, big data, and distributed systems. Built the first Ethereum internal transaction indexer in the AML/compliance industry (2017) — a C++ solution that processed 4M blocks in 6 hours on 256MB RAM. Comfortable across the full stack from low-level protocol work to React frontends. Strong focus on architecture, performance optimization, and test automation. Enjoy mentoring engineers and making technical decisions, but prefer staying close to the code rather than pure management.
+
+---
+
+## Experience
+
+### SmartMerchant | Remote
+
+**Frontend Developer** | Sep 2025 – Feb 2026
+
+B2B platform connecting shop owners with wholesalers.
+
+- Built React/Next.js platform aggregator enabling shop owners to manage wholesaler relationships
+- Implemented robust interface for order management, inventory sync, and supplier communications
+
+---
+
+### Copernic Space | Remote
+
+**CTO** | Jan 2021 – Dec 2023 **Independent Contractor** | Jan 2024 – July 2025
+
+Web3 marketplace for tokenizing space industry assets — satellites, payloads, mission capacity. Worked with private space companies and research institutions navigating complex aerospace compliance requirements.
+
+- Architected EVM smart contract protocol using Factory patterns and recursive ERC-1155 token relationships for representing hierarchical space assets
+- Designed gas-optimized contracts with comprehensive fuzz testing coverage
+- Built custom Subgraph indexer for real-time on-chain data and IPFS/Filecoin integration for decentralized metadata storage
+- Developed full-stack React/Next.js application with Sign-In with Ethereum (SIWE) and Firebase
+- Led technical decisions and mentored team of 3-5 engineers across distributed timezones
+- Company raised $1M total funding
+
+---
+
+### Zee Kaptcha | Remote
+
+**Zero-Knowledge Protocol Engineer (Contract)** | Jan – Mar 2024
+
+Privacy-preserving CAPTCHA verification using zero-knowledge proofs.
+
+- Developed Circom circuits for on-chain CAPTCHA verification without exposing user data
+- Built proof generation and verification infrastructure from scratch — implemented custom Powers of Tau ceremony setup, proof generator, and verifier smart contract
+- Prepared open source release of the solution
+
+
+---
+
+### Firelabs | Remote
+
+**Tech Lead** | May – Aug 2021
+
+Mirror trading platform for fintech client.
+
+- Led team of 4 engineers delivering full-stack Web3 trading platform
+- Built Golang backend and React frontend supporting high-concurrency transactions
+- Structured Agile workflows and delivery milestones under tight deadline
+
+---
+
+### Coinfirm | Warsaw, Poland
+
+**Software Engineer — Big Data & Blockchain Analytics** | Apr 2017 – Dec 2020
+
+Blockchain analytics platform for AML compliance.
+
+- Built the first Ethereum internal transaction indexer in the AML/compliance industry (2017) — cracked internal message parsing that competitors hadn't solved
+- Wrote C++ indexer processing full chain (4M blocks) in 6 hours using only 256MB RAM on a standard laptop
+- Designed ETL pipelines mapping Ethereum data to SQL and Neo4j graph databases, enabling relationship analysis for compliance investigations
+- Extended indexing infrastructure to Bitcoin and UTXO chains (Litecoin, Dash)
+- Engineered MapR and Apache Spark clusters for historical blockchain analysis
+- Automated node operations to handle throughput during peak network activity
+
+---
+
+## Open Source
+
+**Decentralized Cleanup** — Contributing to platform where users document real-world environmental cleanups and receive impact NFTs. Building infrastructure to seal and verify cleanup actions on-chain.
+
+---
+
+
+----
+## Skills
+
+**Languages:** Solidity, TypeScript, C++, Java, Python, Golang
+
+**Blockchain:** EVM internals, Hardhat, Foundry, Viem, Ethers.js, IPFS/Filecoin, ERC standards, Circom (ZK circuits), data indexing
+
+**Data:** Apache Spark, MapR, Hadoop, Neo4j, SQL, NoSQL, ETL pipelines
+
+**Infrastructure:** GCP, Docker, CI/CD, Linux, node operations
+
+**Frontend:** React, Next.js, Tailwind, Shadcn, Figma
+
+---
+
+## Hackathons
+
+- **12h.finance** (ETHGlobal StarkHack 2024) — RWA collateral engine linking stock markets to crypto borrowing
+- **unid.store** (ETHGlobal HackFS 2023) — **Winner: Best Use of IPFS — Decentralized file sharing on Filecoin**
+- **even.cost** (ETHGlobal Superhack 2023) — Gradual Dutch Auction investment dApp
+- **0xKYC** (ETHWarsaw 2022) — Co-founder/CTO — Decentralized identity; secured pre-seed funding and VC accelerator
+
+---
+
+## Education
+
+**B.Sc. Computer Science** — Polish-Japanese Academy of Information Technology, Warsaw, Poland
+
+**M.A. International Economic Relations** — Odesa I.I. Mechnikov National University, Odesa, Ukraine
