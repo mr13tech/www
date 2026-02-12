@@ -98,6 +98,33 @@ Blockchain analytics platform for AML compliance.
 
 **Frontend:** React, Next.js, Tailwind, Shadcn, Figma
 
+** AI **: AI coding feels productive.
+Focused.
+Almost meditative.
+
+You prompt. It responds.
+Sometimes you get magic.
+Sometimes… you get something that almost works.
+
+And that’s the trap.
+
+The loop is addictive:
+“One more prompt.”
+“One more tweak.”
+“One more try and this bug is gone.”
+
+But real engineering isn’t about rolling the dice until it compiles.
+It’s about understanding, ownership, and knowing why something works, not just that it does.
+
+AI can accelerate builders.
+It can also quietly replace thinking if we let it.
+
+The future isn’t “AI vs engineers.”
+It’s engineers who stay intentional and those who don’t.
+
+Use the tool.
+Don’t become dependent on the spin.
+
 ---
 
 ## Hackathons
