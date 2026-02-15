@@ -72,7 +72,7 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="snap-start snap-always h-screen flex items-center justify-center w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 relative overflow-hidden"
+      className="snap-start snap-always min-h-screen-safe flex items-center justify-center w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 relative overflow-hidden"
     >
       <EthSectionBg />
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Github, Twitter, Linkedin, Mail } from 'lucide-react'
 
@@ -37,6 +37,32 @@ const CONTACTS = [
 ]
 
 export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
+  useEffect(() => {
+    if (isOpen) {
+      const scrollY = window.scrollY
+      document.body.classList.add('body-scroll-lock')
+
+      // iOS Safari specific fix
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        document.body.classList.add('body-scroll-lock-ios')
+        document.body.style.top = `-${scrollY}px`
+      }
+    } else {
+      const scrollY = document.body.style.top
+      document.body.classList.remove('body-scroll-lock', 'body-scroll-lock-ios')
+      document.body.style.top = ''
+
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1)
+      }
+    }
+
+    return () => {
+      document.body.classList.remove('body-scroll-lock', 'body-scroll-lock-ios')
+      document.body.style.top = ''
+    }
+  }, [isOpen])
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -47,7 +73,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-modal-backdrop"
           />
 
           {/* Modal */}
@@ -56,7 +82,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-            className="fixed inset-0 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 flex items-center justify-center z-modal p-4"
           >
             <div className="relative w-full max-w-md rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 sm:p-8 shadow-2xl">
               {/* Close button */}
@@ -64,7 +90,8 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 onClick={onClose}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="absolute top-4 right-4 p-2 rounded-lg hover:bg-white/10 transition-colors"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 p-3 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors"
+                aria-label="Close contact modal"
               >
                 <X className="w-5 h-5 text-zinc-400" />
               </motion.button>

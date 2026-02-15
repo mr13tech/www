@@ -59,7 +59,7 @@ export const SectionNav = () => {
 
   return (
     <nav
-      className="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-3 items-center"
+      className="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-nav hidden md:flex flex-col gap-3 items-center"
       aria-label="Section navigation"
     >
       {SECTIONS.map(({ id, label }) => (

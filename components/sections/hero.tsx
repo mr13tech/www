@@ -24,12 +24,12 @@ export const HeroSection = () => {
   }, [prefersReducedMotion])
 
   return (
-    <section id="hero" className="snap-start snap-always h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 overflow-hidden relative">
+    <section id="hero" className="snap-start snap-always w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-12 sm:py-16 md:py-20 overflow-hidden relative" style={{ minHeight: 'var(--viewport-height, 100vh)' }}>
       <EthSectionBg />
 
       {/* Content */}
       <motion.div
-        className="flex flex-col items-center justify-center gap-4 sm:gap-5 md:gap-5 lg:gap-5 xl:gap-5 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10 flex-1"
+        className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-5 lg:gap-5 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10"
         variants={heroVariants}
         initial="hidden"
         animate="visible"
@@ -37,7 +37,7 @@ export const HeroSection = () => {
         {/* Profile Image with parallax */}
         <motion.div
           ref={imageRef}
-          className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48 2xl:w-56 2xl:h-56 will-change-transform"
+          className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48 2xl:w-56 2xl:h-56 will-change-transform flex-shrink-0"
           variants={heroItemVariants}
         >
           <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
@@ -81,10 +81,10 @@ export const HeroSection = () => {
 
         {/* Name with gradient and hover animation */}
         <motion.div
-          className="flex flex-col items-center gap-2 sm:gap-2 md:gap-3"
+          className="flex flex-col items-center gap-1 sm:gap-2 md:gap-3 text-center"
           variants={heroItemVariants}
         >
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-center text-zinc-50 transition-all duration-300 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-zinc-50 transition-all duration-300 leading-tight">
             Pylyp
             <br />
             <span className="inline-block bg-gradient-to-r from-[#b3d574] to-[#24b391] bg-clip-text text-transparent hover:from-[#24b391] hover:to-[#b3d574] transition-all duration-500">
@@ -93,13 +93,13 @@ export const HeroSection = () => {
           </h1>
 
           {/* Achievement highlight */}
-          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-[#b3d574] font-medium text-center max-w-md sm:max-w-lg md:max-w-2xl">
+          <p className="text-xs sm:text-sm md:text-base text-[#b3d574] font-medium max-w-sm sm:max-w-lg md:max-w-2xl leading-snug">
             Built the first Ethereum internal transaction indexer in the AML/compliance industry
             (2017)
           </p>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl text-zinc-400 text-center font-light">
+          <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-zinc-400 font-light">
             Fullstack Engineer & Product Architect
           </p>
         </motion.div>
@@ -110,9 +110,9 @@ export const HeroSection = () => {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on mobile */}
       <motion.div
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:block"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
       >

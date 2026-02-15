@@ -55,7 +55,7 @@ export const CustomCursor = () => {
     <>
       {/* Cursor dot */}
       <motion.div
-        className="fixed w-2 h-2 bg-gradient-to-r from-[#b3d574] to-[#24b391] rounded-full pointer-events-none z-50"
+        className="fixed w-2 h-2 bg-gradient-to-r from-[#b3d574] to-[#24b391] rounded-full pointer-events-none z-cursor"
         animate={{
           x: x - 4,
           y: y - 4,
@@ -66,7 +66,7 @@ export const CustomCursor = () => {
 
       {/* Cursor glow/ring */}
       <motion.div
-        className="fixed w-8 h-8 border border-[#b3d574]/30 rounded-full pointer-events-none z-50"
+        className="fixed w-8 h-8 border border-[#b3d574]/30 rounded-full pointer-events-none z-cursor"
         animate={{
           x: x - 16,
           y: y - 16,

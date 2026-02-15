@@ -11,7 +11,7 @@ export const StickyContact = () => {
   return (
     <motion.button
       onClick={scrollToContact}
-      className="fixed bottom-6 left-6 z-50 group"
+      className="fixed bottom-6 left-6 z-floating group"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1, duration: 0.5 }}

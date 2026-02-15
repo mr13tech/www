@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Roboto_Mono } from 'next/font/google'
 import { CustomCursor } from '@/components/cursor'
 import './globals.css'
@@ -15,14 +15,21 @@ export const metadata: Metadata = {
     'Fullstack engineer with 7+ years in blockchain, big data, and AI-augmented engineering. From low-level C++ protocol optimization to high-conversion React frontends.',
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="h-full overflow-hidden">
-      <body className={`${robotoMono.className} h-full overflow-hidden bg-zinc-950`}>
+    <html lang="en" className="h-full">
+      <body className={`${robotoMono.className} h-full bg-zinc-950`}>
         <CustomCursor />
         {children}
       </body>
