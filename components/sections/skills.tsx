@@ -27,8 +27,8 @@ const categoryColors: Record<string, string> = {
 export const SkillsSection = () => {
   return (
     <section id="skills" className="snap-start snap-always min-h-screen-safe overflow-y-auto overflow-x-hidden w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative">
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="sticky top-0 h-screen w-full">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
           <EthSectionBg />
         </div>
       </div>

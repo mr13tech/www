@@ -9,15 +9,14 @@ export const ExperienceSection = () => {
   return (
     <section
       id="experience"
-      className="snap-start snap-always min-h-screen-safe overflow-y-auto overflow-x-hidden w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative"
+      className="snap-start snap-always h-screen-safe overflow-hidden w-full relative"
     >
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <div className="sticky top-0 h-screen w-full">
-          <EthSectionBg />
-        </div>
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <EthSectionBg />
       </div>
 
-      <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7 lg:gap-7 xl:gap-7 relative z-10 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8">
+      <div className="relative z-10 h-full overflow-y-auto overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+      <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7 lg:gap-7 xl:gap-7 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8">
         {/* Section Title */}
         <motion.div
           className="flex flex-col gap-1 sm:gap-2"
@@ -40,6 +39,7 @@ export const ExperienceSection = () => {
             <ExperienceCard key={experience.id} experience={experience} index={index} />
           ))}
         </div>
+      </div>
       </div>
     </section>
   )

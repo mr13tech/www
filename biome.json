@@ -18,7 +18,6 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-      "performance": "warn",
       "style": "warn",
       "a11y": "warn"
     }

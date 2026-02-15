@@ -165,7 +165,6 @@ export const ContactSection = () => {
 
         {/* Copyright */}
         <div className="text-center text-xs text-zinc-500 pt-6 border-t border-white/10 w-full">
-          <p>&copy; 2026 Pylyp Radionov. All rights reserved.</p>
         </div>
       </motion.div>
     </section>
