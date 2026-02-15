@@ -79,33 +79,32 @@ export const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Name with gradient and hover animation */}
+        {/* Right column: name + stats */}
         <motion.div
-          className="flex flex-col items-center gap-1 sm:gap-2 md:gap-3 text-center md:items-start md:text-left"
+          className="flex flex-col items-center gap-3 sm:gap-4 md:items-start"
           variants={heroItemVariants}
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-zinc-50 transition-all duration-300 leading-tight">
-            Pylyp
-            <br />
-            <span className="inline-block bg-gradient-to-r from-[#b3d574] to-[#24b391] bg-clip-text text-transparent hover:from-[#24b391] hover:to-[#b3d574] transition-all duration-500">
-              Radionov
-            </span>
-          </h1>
+          <div className="flex flex-col items-center gap-1 sm:gap-2 md:gap-3 text-center md:items-start md:text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-zinc-50 transition-all duration-300 leading-tight">
+              Pylyp
+              <br />
+              <span className="inline-block bg-gradient-to-r from-[#b3d574] to-[#24b391] bg-clip-text text-transparent hover:from-[#24b391] hover:to-[#b3d574] transition-all duration-500">
+                Radionov
+              </span>
+            </h1>
 
-          {/* Achievement highlight */}
-          <p className="text-xs sm:text-sm md:text-base text-[#b3d574] font-medium max-w-sm sm:max-w-lg md:max-w-2xl leading-snug">
-            Built the first Ethereum internal transaction indexer in the AML/compliance industry
-            (2017)
-          </p>
+            {/* Achievement highlight */}
+            <p className="text-xs sm:text-sm md:text-base text-[#b3d574] font-medium max-w-sm sm:max-w-lg md:max-w-2xl leading-snug">
+              Built the first Ethereum internal transaction indexer in the AML/compliance industry
+              (2017)
+            </p>
 
-          {/* Subtitle */}
-          <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-zinc-400 font-light">
-            Fullstack Engineer & Product Architect
-          </p>
-        </motion.div>
+            {/* Subtitle */}
+            <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-zinc-400 font-light">
+              Fullstack Engineer & Product Architect
+            </p>
+          </div>
 
-        {/* Stats Counter */}
-        <motion.div variants={heroItemVariants} className="md:self-start">
           <StatsCounter />
         </motion.div>
       </motion.div>

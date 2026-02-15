@@ -134,13 +134,13 @@ export const ContactSection = () => {
 
         {/* Contact links */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {CONTACTS.map(({ label, icon: Icon, value, link, external }) => (
+          {CONTACTS.map(({ label, icon: Icon, value, link, external }, index) => (
             <motion.a
               key={label}
               href={link}
@@ -148,16 +148,16 @@ export const ContactSection = () => {
               rel={external ? 'noopener noreferrer' : undefined}
               variants={itemVariants}
               whileHover={{ y: -4 }}
-              className="flex items-center gap-3 px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-200 group"
+              className={`flex items-center gap-3 px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-200 group overflow-hidden${index === CONTACTS.length - 1 ? ' sm:col-span-2' : ''}`}
             >
-              <div className="p-2 rounded-lg bg-gradient-to-br from-[#b3d574] to-[#24b391] text-zinc-950 group-hover:shadow-lg group-hover:shadow-[#b3d574]/30 transition-all">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-[#b3d574] to-[#24b391] text-zinc-950 group-hover:shadow-lg group-hover:shadow-[#b3d574]/30 transition-all flex-shrink-0">
                 <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium text-zinc-50 group-hover:text-[#b3d574] transition-colors">
                   {label}
                 </p>
-                <p className="text-xs text-zinc-400">{value}</p>
+                <p className="text-xs text-zinc-400 truncate">{value}</p>
               </div>
             </motion.a>
           ))}

@@ -27,8 +27,10 @@ const categoryColors: Record<string, string> = {
 export const SkillsSection = () => {
   return (
     <section id="skills" className="snap-start snap-always min-h-screen-safe overflow-y-auto overflow-x-hidden w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative">
-      <div className="sticky top-0 h-screen z-0 pointer-events-none -ml-4 sm:-ml-6 md:-ml-8 lg:-ml-10 xl:-ml-12 -mr-4 sm:-mr-6 md:-mr-8 lg:-mr-10 xl:-mr-12 -mb-[100vh]">
-        <EthSectionBg />
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="sticky top-0 h-screen w-full">
+          <EthSectionBg />
+        </div>
       </div>
 
       <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7 lg:gap-7 xl:gap-7 relative z-10 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8">
@@ -54,7 +56,10 @@ export const SkillsSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {skillCategories.map(category => {
+          {[
+            skillCategories.find(c => c.id === 'ai-workflows')!,
+            ...skillCategories.filter(c => c.id !== 'ai-workflows'),
+          ].map(category => {
             const Icon = iconMap[category.icon as keyof typeof iconMap]
             const accentColor = categoryColors[category.id] || '#b3d574'
 
@@ -65,7 +70,7 @@ export const SkillsSection = () => {
                 whileHover={{ y: -4 }}
                 className={`rounded-xl border backdrop-blur-sm p-3 sm:p-4 md:p-5 transition-all duration-300 hover:shadow-lg group${
                   category.id === 'ai-workflows'
-                    ? ' border-[#a78bfa]/30 hover:border-[#a78bfa]/60 bg-[#a78bfa]/5 hover:bg-[#a78bfa]/10 shadow-sm shadow-[#a78bfa]/10'
+                    ? ' sm:col-span-2 border-[#a78bfa]/30 hover:border-[#a78bfa]/60 bg-[#a78bfa]/5 hover:bg-[#a78bfa]/10 shadow-sm shadow-[#a78bfa]/10'
                     : ' border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10'
                 }`}
                 style={{

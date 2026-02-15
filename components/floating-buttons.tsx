@@ -88,7 +88,8 @@ export const FloatingButtons = () => {
           )}
         </AnimatePresence>
 
-        {/* Contact and CV Buttons - Hide on contact section */}
+        {/* Contact and CV Buttons - desktop only, hide on contact section */}
+        <div className="hidden md:flex flex-col gap-3">
         <AnimatePresence>
           {isVisible && (
             <>
@@ -130,6 +131,7 @@ export const FloatingButtons = () => {
             </>
           )}
         </AnimatePresence>
+        </div>
       </div>
 
       <ContactModal

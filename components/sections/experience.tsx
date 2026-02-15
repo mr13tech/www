@@ -11,8 +11,10 @@ export const ExperienceSection = () => {
       id="experience"
       className="snap-start snap-always min-h-screen-safe overflow-y-auto overflow-x-hidden w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative"
     >
-      <div className="sticky top-0 h-screen z-0 pointer-events-none -ml-4 sm:-ml-6 md:-ml-8 lg:-ml-10 xl:-ml-12 -mr-4 sm:-mr-6 md:-mr-8 lg:-mr-10 xl:-mr-12 -mb-[100vh]">
-        <EthSectionBg />
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="sticky top-0 h-screen w-full">
+          <EthSectionBg />
+        </div>
       </div>
 
       <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7 lg:gap-7 xl:gap-7 relative z-10 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8">
