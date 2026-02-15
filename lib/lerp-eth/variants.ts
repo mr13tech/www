@@ -17,9 +17,22 @@ import variant29 from './variant-29'
 import variant30 from './variant-30'
 
 export const allVariants: DrawFn[] = [
-  variant1, variant2, variant4, variant6, variant7, variant8,
-  variant9, variant15, variant16, variant18, variant21, variant23,
-  variant24, variant27, variant29, variant30,
+  variant1,
+  variant2,
+  variant4,
+  variant6,
+  variant7,
+  variant8,
+  variant9,
+  variant15,
+  variant16,
+  variant18,
+  variant21,
+  variant23,
+  variant24,
+  variant27,
+  variant29,
+  variant30,
 ]
 
 export function getRandomVariant(): DrawFn {

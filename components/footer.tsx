@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const CONTACTS = [
   { label: 'GitHub', link: 'https://github.com/mr13tech' },
   { label: 'Twitter', link: 'https://twitter.com/mr13tech' },
@@ -32,6 +34,13 @@ export const Footer = () => (
 
 const ElipseGradient = () => (
   <div className="absolute -left-[276px] -top-[114px] rotate-30 lg:-left-[213px] lg:-top-16 lg:rotate-0">
-    <img src="/images/footer-elipse.svg" alt="footer-elipse" />
+    <Image
+      src="/images/footer-elipse.svg"
+      alt=""
+      width={416}
+      height={347}
+      className="w-auto h-auto"
+      quality={75}
+    />
   </div>
 )

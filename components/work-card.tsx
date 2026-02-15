@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { SkillPill } from '@/components/ui/skill-pill'
 import { Badge } from '@/components/ui/badge'
 import { ExternalLink } from 'lucide-react'
@@ -61,11 +62,18 @@ export const WorkCard = ({
       <div className="flex flex-col gap-2 sm:gap-3">
         {logoSrc && (
           <motion.div
-            className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 rounded-md sm:rounded-lg bg-white/10 flex items-center justify-center overflow-hidden border border-white/10"
+            className="relative w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 rounded-md sm:rounded-lg bg-white/10 flex items-center justify-center overflow-hidden border border-white/10"
             whileHover={{ scale: 1.05, borderColor: 'rgba(179, 213, 116, 0.3)' }}
             transition={{ duration: 0.2 }}
           >
-            <img src={logoSrc} alt={title} className="w-full h-full object-contain" />
+            <Image
+              src={logoSrc}
+              alt={title}
+              fill
+              className="object-contain p-2"
+              sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 56px"
+              quality={85}
+            />
           </motion.div>
         )}
         <div className="flex flex-col gap-1.5 sm:gap-2">

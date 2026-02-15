@@ -1,6 +1,6 @@
 'use client'
 
-import { navState, Nav, useNavStore } from '@/components/nav'
+import { type navState, Nav, useNavStore } from '@/components/nav'
 import { About } from '@/components/about'
 import { History } from '@/components/history'
 import { TBD } from '@/components/tbd'

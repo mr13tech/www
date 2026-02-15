@@ -9,9 +9,25 @@ const variant9: DrawFn = (ctx, faces, _top, _bot, numLines) => {
       const tri = faces[fi]
       for (let idx = 0; idx < 3; idx++) {
         if (fi % 2 === 0) {
-          drawLine(ctx, tri[idx], lerp(tri[(idx + 1) % 3], tri[(idx + 2) % 3], t), '#b3d574', '#24b391', 0.16 * alpha, 0.8)
+          drawLine(
+            ctx,
+            tri[idx],
+            lerp(tri[(idx + 1) % 3], tri[(idx + 2) % 3], t),
+            '#b3d574',
+            '#24b391',
+            0.16 * alpha,
+            0.8
+          )
         } else {
-          drawLine(ctx, tri[idx], lerp(tri[(idx + 2) % 3], tri[(idx + 1) % 3], t), '#24b391', '#b3d574', 0.16 * alpha, 0.8)
+          drawLine(
+            ctx,
+            tri[idx],
+            lerp(tri[(idx + 2) % 3], tri[(idx + 1) % 3], t),
+            '#24b391',
+            '#b3d574',
+            0.16 * alpha,
+            0.8
+          )
         }
       }
     }

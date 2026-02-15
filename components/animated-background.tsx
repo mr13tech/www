@@ -37,7 +37,7 @@ function createEthDiamond(scale: number, cx: number, cy: number): Face[] {
 }
 
 // Equilateral triangle vertices (lerp-triangle.py style)
-function createTriangle(cx: number, cy: number, size: number, rotation: number = 0): Face {
+function createTriangle(cx: number, cy: number, size: number, rotation = 0): Face {
   const pts: Point[] = []
   for (let i = 0; i < 3; i++) {
     const angle = rotation + (i * 2 * Math.PI) / 3 - Math.PI / 2
@@ -57,7 +57,7 @@ function lerpFace(
   color1: string,
   color2: string,
   baseAlpha: number,
-  lineWidth: number,
+  lineWidth: number
 ) {
   for (let step = 0; step < numLines; step++) {
     const ratio = step / numLines
@@ -109,7 +109,7 @@ export const AnimatedBackground = () => {
     if (!ctx) return
 
     let animId: number
-    let startTime = Date.now()
+    const startTime = Date.now()
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio, 2)
@@ -132,7 +132,7 @@ export const AnimatedBackground = () => {
         y: 0.1,
         size: 55,
         rotation: Math.PI / 6,
-        rotSpeed: -0.00015,
+        rotSpeed: -0.000_15,
         numLines: 7,
         alpha: 0.1,
       },
@@ -142,7 +142,7 @@ export const AnimatedBackground = () => {
         y: 0.82,
         size: 60,
         rotation: Math.PI / 3,
-        rotSpeed: 0.00018,
+        rotSpeed: 0.000_18,
         numLines: 7,
         alpha: 0.1,
       },
@@ -162,7 +162,7 @@ export const AnimatedBackground = () => {
         y: 0.48,
         size: 45,
         rotation: Math.PI / 2,
-        rotSpeed: 0.00025,
+        rotSpeed: 0.000_25,
         numLines: 6,
         alpha: 0.08,
       },
@@ -172,7 +172,7 @@ export const AnimatedBackground = () => {
         y: 0.5,
         size: 50,
         rotation: -Math.PI / 5,
-        rotSpeed: -0.00022,
+        rotSpeed: -0.000_22,
         numLines: 6,
         alpha: 0.09,
       },

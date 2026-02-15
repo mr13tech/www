@@ -14,7 +14,7 @@ interface Stat {
 const stats: Stat[] = [
   { label: 'Years Experience', value: '8', prefix: '+' },
   { label: 'Projects Shipped', value: '20', prefix: '+' },
-  { label: 'Hackathon Wins', value: '1' },
+  { label: 'Hackathons · 1 Win', value: '7', prefix: '+' },
 ]
 
 export const StatsCounter = () => {
@@ -27,45 +27,28 @@ export const StatsCounter = () => {
 
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.5,
-          },
-        },
-      }}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 w-full"
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.3 }}
+      className="flex items-center rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm divide-x divide-white/10 w-full"
     >
       {stats.map((stat, index) => (
-        <motion.div
+        <div
           key={stat.label}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 100,
-            damping: 15,
-            delay: index * 0.1,
-          }}
-          className="flex flex-col items-center justify-center p-4 rounded-lg bg-white/5 border border-white/10 hover:border-white/20 transition-colors backdrop-blur-sm"
+          className="flex flex-col items-center justify-center px-3 py-2.5 md:px-5 md:py-3 flex-1"
         >
-          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-green mb-2">
+          <div className="text-lg md:text-xl font-bold text-gradient-green">
             {prefersReducedMotion ? (
               <span>
                 {stat.prefix}
                 {stat.value}
               </span>
             ) : (
-              <AnimatedNumber value={parseInt(stat.value)} prefix={stat.prefix} />
+              <AnimatedNumber value={Number.parseInt(stat.value)} prefix={stat.prefix} />
             )}
           </div>
-          <div className="text-xs md:text-sm text-zinc-400 text-center">{stat.label}</div>
-        </motion.div>
+          <div className="text-xs text-zinc-400 text-center whitespace-nowrap">{stat.label}</div>
+        </div>
       ))}
     </motion.div>
   )

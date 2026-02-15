@@ -5,7 +5,7 @@ export type DrawFn = (
   faces: Face[],
   topFaces: Face[],
   botFaces: Face[],
-  numLines: number,
+  numLines: number
 ) => void
 
 export function createEthDiamond(scale: number, cx: number, cy: number): Face[] {
@@ -50,7 +50,7 @@ export function drawLine(
   color1: string,
   color2: string,
   alpha: number,
-  lineWidth: number,
+  lineWidth: number
 ) {
   const grad = ctx.createLinearGradient(p1[0], p1[1], p2[0], p2[1])
   grad.addColorStop(0, withAlpha(color1, alpha))
@@ -69,7 +69,7 @@ export function drawTriangleOutline(
   color1: string,
   color2: string,
   alpha: number,
-  lineWidth: number,
+  lineWidth: number
 ) {
   for (let i = 0; i < 3; i++) {
     drawLine(ctx, pts[i], pts[(i + 1) % 3], color1, color2, alpha, lineWidth)

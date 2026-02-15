@@ -8,20 +8,6 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'ai-workflows',
-    name: 'AI-Augmented Engineering',
-    icon: 'Brain',
-    description: 'Spec-driven development, agentic coding, rapid prototyping',
-    skills: [
-      'Spec-Driven Development',
-      'Claude Code',
-      'Aider',
-      'Gemini CLI',
-      'LLM-Assisted Architecture',
-      'Rapid Prototyping',
-    ],
-  },
-  {
     id: 'web3-blockchain',
     name: 'Web3 & Blockchain',
     icon: 'Zap',
@@ -108,6 +94,20 @@ export const skillCategories: SkillCategory[] = [
       'Stakeholder Management',
       'Architecture Design',
       'Mentoring',
+    ],
+  },
+  {
+    id: 'ai-workflows',
+    name: 'AI-Augmented Engineering',
+    icon: 'Brain',
+    description: 'Spec-driven development, agentic coding, rapid prototyping',
+    skills: [
+      'Spec-Driven Development',
+      'Claude Code',
+      'Aider',
+      'Gemini CLI',
+      'LLM-Assisted Architecture',
+      'Rapid Prototyping',
     ],
   },
 ]

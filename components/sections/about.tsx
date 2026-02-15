@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export const AboutSection = () => {
   return (
     <div className="flex w-full max-w-[588px] flex-col gap-4 lg:max-w-[1024px]">
@@ -18,16 +20,38 @@ const Avatar = () => (
       <p className="mx-2 text-center text-sm text-white lg:text-base">mr13tech</p>
     </div>
 
-    <div className="absolute inset-0 flex items-center justify-center">
-      <img src="/images/focus.svg" alt="focus" />
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <Image
+        src="/images/focus.svg"
+        alt=""
+        width={186}
+        height={186}
+        className="w-auto h-auto"
+      />
     </div>
 
-    <img
-      className="grow rounded-3xl lg:hidden"
-      src="/images/me.mr13.mobile.png"
-      alt="me.mr13.mobile"
-    />
-    <img className="hidden rounded-3xl lg:block" src="/images/me.mr13.png" alt="me.mr13" />
+    <div className="relative grow rounded-3xl lg:hidden min-h-[272px]">
+      <Image
+        src="/images/me.mr13.mobile.png"
+        alt="Profile photo"
+        fill
+        className="rounded-3xl object-cover"
+        sizes="(max-width: 1024px) 588px, 0px"
+        priority
+        quality={90}
+      />
+    </div>
+    <div className="relative hidden rounded-3xl lg:block w-full h-[345px]">
+      <Image
+        src="/images/me.mr13.png"
+        alt="Profile photo"
+        fill
+        className="rounded-3xl object-cover"
+        sizes="(min-width: 1024px) 512px, 0px"
+        priority
+        quality={90}
+      />
+    </div>
   </div>
 )
 

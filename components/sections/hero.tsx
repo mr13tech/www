@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 import { EthSectionBg } from '@/components/eth-section-bg'
 import { StatsCounter } from '@/components/stats-counter'
 import { heroVariants, heroItemVariants } from '@/lib/animations'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
+import Image from 'next/image'
 
 export const HeroSection = () => {
   const imageRef = useRef<HTMLDivElement>(null)
@@ -23,12 +24,12 @@ export const HeroSection = () => {
   }, [prefersReducedMotion])
 
   return (
-    <section className="snap-start snap-always h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 2xl:py-40 overflow-hidden relative">
+    <section id="hero" className="snap-start snap-always h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 overflow-hidden relative">
       <EthSectionBg />
 
       {/* Content */}
       <motion.div
-        className="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-16 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl w-full relative z-10 flex-1"
+        className="flex flex-col items-center justify-center gap-4 sm:gap-5 md:gap-5 lg:gap-5 xl:gap-5 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10 flex-1"
         variants={heroVariants}
         initial="hidden"
         animate="visible"
@@ -36,35 +37,54 @@ export const HeroSection = () => {
         {/* Profile Image with parallax */}
         <motion.div
           ref={imageRef}
-          className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 will-change-transform"
+          className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48 2xl:w-56 2xl:h-56 will-change-transform"
           variants={heroItemVariants}
         >
-          <img
-            src="/images/focus.svg"
-            alt=""
-            className="absolute inset-0 w-full h-full pointer-events-none"
-          />
-          <div className="absolute inset-2 sm:inset-3 md:inset-4 lg:inset-5 xl:inset-6 2xl:inset-8">
-            <img
-              src="/images/me.mr13.mobile.png"
-              alt="Pylyp Radionov"
-              className="w-full h-full rounded-3xl object-cover border-2 border-zinc-800 md:hidden"
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
+            <Image
+              src="/images/focus.svg"
+              alt=""
+              width={224}
+              height={224}
+              className="w-full h-full"
+              priority
             />
-            <img
-              src="/images/me.mr13.png"
-              alt="Pylyp Radionov"
-              className="w-full h-full rounded-3xl object-cover border-2 border-zinc-800 hidden md:block"
-            />
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#b3d574]/20 to-[#24b391]/20 opacity-0 hover:opacity-100 transition-opacity duration-500" />
+          </div>
+          <div className="absolute inset-2 sm:inset-2 md:inset-3 lg:inset-3 xl:inset-3 2xl:inset-4 w-auto h-auto">
+            {/* Mobile image */}
+            <div className="relative w-full h-full rounded-3xl overflow-hidden md:hidden">
+              <Image
+                src="/images/me.mr13.mobile.png"
+                alt="Pylyp Radionov"
+                fill
+                className="object-cover border-2 border-zinc-800"
+                sizes="(max-width: 768px) 160px, 0px"
+                priority
+                quality={90}
+              />
+            </div>
+            {/* Desktop image */}
+            <div className="relative w-full h-full rounded-3xl overflow-hidden hidden md:block">
+              <Image
+                src="/images/me.mr13.png"
+                alt="Pylyp Radionov"
+                fill
+                className="object-cover border-2 border-zinc-800"
+                sizes="(min-width: 768px) 192px, 0px"
+                priority
+                quality={90}
+              />
+            </div>
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#b3d574]/20 to-[#24b391]/20 opacity-0 hover:opacity-100 transition-opacity duration-500 z-20" />
           </div>
         </motion.div>
 
         {/* Name with gradient and hover animation */}
         <motion.div
-          className="flex flex-col items-center gap-3 sm:gap-4 md:gap-5"
+          className="flex flex-col items-center gap-2 sm:gap-2 md:gap-3"
           variants={heroItemVariants}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-center text-zinc-50 transition-all duration-300 leading-tight">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-center text-zinc-50 transition-all duration-300 leading-tight">
             Pylyp
             <br />
             <span className="inline-block bg-gradient-to-r from-[#b3d574] to-[#24b391] bg-clip-text text-transparent hover:from-[#24b391] hover:to-[#b3d574] transition-all duration-500">
@@ -73,14 +93,14 @@ export const HeroSection = () => {
           </h1>
 
           {/* Achievement highlight */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#b3d574] font-medium text-center max-w-md sm:max-w-lg md:max-w-2xl">
+          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-[#b3d574] font-medium text-center max-w-md sm:max-w-lg md:max-w-2xl">
             Built the first Ethereum internal transaction indexer in the AML/compliance industry
             (2017)
           </p>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-zinc-400 text-center font-light">
-            Fullstack Engineer & Product Architect · 7+ Years
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl text-zinc-400 text-center font-light">
+            Fullstack Engineer & Product Architect
           </p>
         </motion.div>
 

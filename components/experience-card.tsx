@@ -73,7 +73,7 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
 
         {/* Card with glassmorphism */}
         <motion.div
-          className="flex-1 rounded-lg sm:rounded-xl md:rounded-2xl border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 p-4 sm:p-5 md:p-6 lg:p-8 transition-all duration-300 hover:shadow-lg hover:shadow-[#b3d574]/20 backdrop-blur-sm group"
+          className="flex-1 rounded-lg sm:rounded-xl md:rounded-2xl border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 p-3 sm:p-4 md:p-5 lg:p-5 transition-all duration-300 hover:shadow-lg hover:shadow-[#b3d574]/20 backdrop-blur-sm group"
           whileHover={{ y: -4 }}
           transition={{ duration: 0.2 }}
         >
@@ -81,10 +81,10 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
           <div className="flex flex-col gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
               <div>
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-zinc-50 group-hover:text-[#b3d574] transition-colors">
+                <h3 className="text-sm sm:text-base md:text-lg lg:text-lg font-bold text-zinc-50 group-hover:text-[#b3d574] transition-colors">
                   {experience.company}
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-zinc-400">
+                <p className="text-xs sm:text-xs md:text-sm lg:text-sm text-zinc-400">
                   {experience.role}
                 </p>
               </div>
@@ -93,7 +93,7 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
           </div>
 
           {/* Description */}
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-zinc-400 leading-relaxed mb-3 sm:mb-4">
+          <p className="text-xs sm:text-xs md:text-sm lg:text-sm text-zinc-400 leading-relaxed mb-2 sm:mb-3">
             {experience.description}
           </p>
 
@@ -134,7 +134,7 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
                   initial={{ opacity: 0, x: -10 }}
                   animate={expanded ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                   transition={{ duration: 0.2, delay: idx * 0.05 }}
-                  className="text-xs sm:text-sm md:text-base lg:text-lg text-zinc-400 leading-relaxed"
+                  className="text-xs sm:text-xs md:text-sm text-zinc-400 leading-relaxed"
                 >
                   • {achievement}
                 </motion.div>

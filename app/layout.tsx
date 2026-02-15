@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
 import { CustomCursor } from '@/components/cursor'
-import { StickyContact } from '@/components/sticky-contact'
 import './globals.css'
 
 const robotoMono = Roboto_Mono({
@@ -26,7 +25,6 @@ export default function RootLayout({
       <body className={`${robotoMono.className} h-full overflow-hidden bg-zinc-950`}>
         <CustomCursor />
         {children}
-        <StickyContact />
       </body>
     </html>
   )
