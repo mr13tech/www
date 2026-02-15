@@ -8,9 +8,15 @@ import { useReducedMotion } from '@/hooks/use-reduced-motion'
 export const CustomCursor = () => {
   const { x, y } = useMousePosition()
   const [isHoveringButton, setIsHoveringButton] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
   const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
+    // Detect touch devices — skip custom cursor entirely
+    const isTouch = window.matchMedia('(hover: none)').matches || navigator.maxTouchPoints > 0
+    setIsTouchDevice(isTouch)
+    if (isTouch) return
+
     // Hide default cursor
     document.documentElement.style.cursor = 'none'
 

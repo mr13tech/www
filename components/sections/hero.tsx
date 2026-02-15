@@ -29,7 +29,7 @@ export const HeroSection = () => {
 
       {/* Content */}
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-5 lg:gap-5 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10"
+        className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:flex-row md:items-center md:justify-center md:gap-10 lg:gap-14 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10"
         variants={heroVariants}
         initial="hidden"
         animate="visible"
@@ -37,7 +37,7 @@ export const HeroSection = () => {
         {/* Profile Image with parallax */}
         <motion.div
           ref={imageRef}
-          className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-48 xl:h-48 2xl:w-56 2xl:h-56 will-change-transform flex-shrink-0"
+          className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-52 md:h-52 lg:w-60 lg:h-60 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72 will-change-transform flex-shrink-0"
           variants={heroItemVariants}
         >
           <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
@@ -70,7 +70,7 @@ export const HeroSection = () => {
                 alt="Pylyp Radionov"
                 fill
                 className="object-cover border-2 border-zinc-800"
-                sizes="(min-width: 768px) 192px, 0px"
+                sizes="(min-width: 768px) 288px, 0px"
                 priority
                 quality={90}
               />
@@ -81,7 +81,7 @@ export const HeroSection = () => {
 
         {/* Name with gradient and hover animation */}
         <motion.div
-          className="flex flex-col items-center gap-1 sm:gap-2 md:gap-3 text-center"
+          className="flex flex-col items-center gap-1 sm:gap-2 md:gap-3 text-center md:items-start md:text-left"
           variants={heroItemVariants}
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-zinc-50 transition-all duration-300 leading-tight">
@@ -105,7 +105,7 @@ export const HeroSection = () => {
         </motion.div>
 
         {/* Stats Counter */}
-        <motion.div variants={heroItemVariants}>
+        <motion.div variants={heroItemVariants} className="md:self-start">
           <StatsCounter />
         </motion.div>
       </motion.div>

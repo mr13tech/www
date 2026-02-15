@@ -58,7 +58,7 @@ export const FloatingButtons = () => {
 
   return (
     <motion.div
-      className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-modal flex flex-col gap-3 pointer-events-auto"
+      className="fixed bottom-[calc(3.5rem+env(safe-area-inset-bottom,0px)+1rem)] sm:bottom-6 md:bottom-6 right-4 sm:right-6 z-floating flex flex-col gap-3 pointer-events-auto"
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3 }}
@@ -81,7 +81,7 @@ export const FloatingButtons = () => {
               aria-label="Scroll to top"
             >
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#b3d574] to-[#24b391] opacity-30 blur-lg group-hover:opacity-50 transition-opacity" />
-              <div className="relative w-14 h-14 sm:w-12 sm:h-12 rounded-full bg-zinc-900/90 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 flex items-center justify-center text-zinc-400 hover:text-[#b3d574] transition-all">
+              <div className="relative w-12 h-12 rounded-full bg-zinc-900/90 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 flex items-center justify-center text-zinc-400 hover:text-[#b3d574] transition-all">
                 <ChevronUp className="w-5 h-5" />
               </div>
             </motion.button>
@@ -105,7 +105,7 @@ export const FloatingButtons = () => {
                 aria-label="Contact"
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#b3d574] to-[#24b391] opacity-30 blur-lg group-hover:opacity-50 transition-opacity" />
-                <div className="relative w-14 h-14 sm:w-12 sm:h-12 rounded-full bg-zinc-900/90 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 flex items-center justify-center text-zinc-400 hover:text-[#b3d574] transition-all">
+                <div className="relative w-12 h-12 rounded-full bg-zinc-900/90 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 flex items-center justify-center text-zinc-400 hover:text-[#b3d574] transition-all">
                   <Mail className="w-5 h-5" />
                 </div>
               </motion.button>
@@ -123,7 +123,7 @@ export const FloatingButtons = () => {
                 aria-label="Download CV"
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#b3d574] to-[#24b391] opacity-50 blur-xl group-hover:opacity-75 transition-opacity" />
-                <div className="relative w-14 h-14 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-[#b3d574] to-[#24b391] flex items-center justify-center text-zinc-950 shadow-lg">
+                <div className="relative w-12 h-12 rounded-full bg-gradient-to-r from-[#b3d574] to-[#24b391] flex items-center justify-center text-zinc-950 shadow-lg">
                   <Download className="w-5 h-5" />
                 </div>
               </motion.button>

@@ -80,7 +80,7 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
           {/* Header */}
           <div className="flex flex-col gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
-              <div>
+              <div className="min-w-0">
                 <h3 className="text-sm sm:text-base md:text-lg lg:text-lg font-bold text-zinc-50 group-hover:text-[#b3d574] transition-colors">
                   {experience.company}
                 </h3>
@@ -88,7 +88,9 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
                   {experience.role}
                 </p>
               </div>
-              <Badge label={`${experience.startDate} — ${experience.endDate}`} variant="duration" />
+              <div className="flex-shrink-0">
+                <Badge label={`${experience.startDate} — ${experience.endDate}`} variant="duration" />
+              </div>
             </div>
           </div>
 
@@ -108,11 +110,11 @@ export const ExperienceCard = ({ experience, index = 0 }: ExperienceCardProps) =
           {experience.achievements.length > 0 && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="flex items-center gap-2 text-zinc-400 hover:text-[#b3d574] transition-colors duration-200 text-xs sm:text-sm font-medium group/btn"
+              className="flex items-center gap-2 text-zinc-400 hover:text-[#b3d574] transition-colors duration-200 text-xs sm:text-sm font-medium group/btn min-h-[44px] py-1 -mx-1 px-1 rounded-lg hover:bg-white/5"
             >
               <span>Key Achievements</span>
               <motion.div animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                <ChevronDown className="w-3 sm:w-4 h-3 sm:h-4 group-hover/btn:text-[#b3d574]" />
+                <ChevronDown className="w-4 h-4 group-hover/btn:text-[#b3d574]" />
               </motion.div>
             </button>
           )}

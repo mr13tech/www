@@ -58,29 +58,61 @@ export const SectionNav = () => {
   }
 
   return (
-    <nav
-      className="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-nav hidden md:flex flex-col gap-3 items-center"
-      aria-label="Section navigation"
-    >
-      {SECTIONS.map(({ id, label }) => (
-        <button
-          key={id}
-          onClick={() => scrollTo(id)}
-          className="group relative flex items-center"
-          aria-label={`Go to ${label}`}
-        >
-          <span className="absolute right-full mr-3 whitespace-nowrap text-[10px] text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 uppercase tracking-widest font-mono">
-            {label}
-          </span>
-          <span
-            className={`block rounded-full transition-all duration-300 ${
-              active === id
-                ? 'w-2 h-2 bg-[#b3d574] shadow-[0_0_8px_rgba(179,213,116,0.5)]'
-                : 'w-1.5 h-1.5 bg-zinc-700 group-hover:bg-zinc-500'
+    <>
+      {/* Desktop right-side dot nav */}
+      <nav
+        className="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-nav hidden md:flex flex-col gap-3 items-center"
+        aria-label="Section navigation"
+      >
+        {SECTIONS.map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => scrollTo(id)}
+            className="group relative flex items-center"
+            aria-label={`Go to ${label}`}
+          >
+            <span className="absolute right-full mr-3 whitespace-nowrap text-[10px] text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 uppercase tracking-widest font-mono">
+              {label}
+            </span>
+            <span
+              className={`block rounded-full transition-all duration-300 ${
+                active === id
+                  ? 'w-2 h-2 bg-[#b3d574] shadow-[0_0_8px_rgba(179,213,116,0.5)]'
+                  : 'w-1.5 h-1.5 bg-zinc-700 group-hover:bg-zinc-500'
+              }`}
+            />
+          </button>
+        ))}
+      </nav>
+
+      {/* Mobile bottom tab bar */}
+      <nav
+        className="fixed bottom-0 left-0 right-0 z-nav md:hidden flex items-center justify-around h-14 bg-zinc-950/95 backdrop-blur-md border-t border-white/10 pb-[env(safe-area-inset-bottom,0px)]"
+        aria-label="Section navigation"
+      >
+        {SECTIONS.map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => scrollTo(id)}
+            className={`flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-1 transition-colors duration-200 ${
+              active === id ? 'text-[#b3d574]' : 'text-zinc-500 hover:text-zinc-300'
             }`}
-          />
-        </button>
-      ))}
-    </nav>
+            aria-label={`Go to ${label}`}
+            aria-current={active === id ? 'page' : undefined}
+          >
+            <span
+              className={`block rounded-full transition-all duration-300 ${
+                active === id
+                  ? 'w-5 h-0.5 bg-[#b3d574] shadow-[0_0_6px_rgba(179,213,116,0.5)] rounded-sm'
+                  : 'w-1 h-1 bg-zinc-600'
+              }`}
+            />
+            <span className="text-[10px] font-mono uppercase tracking-widest leading-none mt-0.5">
+              {label}
+            </span>
+          </button>
+        ))}
+      </nav>
+    </>
   )
 }

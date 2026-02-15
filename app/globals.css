@@ -166,6 +166,10 @@
     min-height: 100dvh;
   }
 
+  .bottom-nav-safe {
+    bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
   /* Body scroll lock for modals */
   .body-scroll-lock {
     overflow: hidden !important;
