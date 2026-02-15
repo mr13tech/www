@@ -12,6 +12,15 @@ export interface Hackathon {
 
 export const hackathons: Hackathon[] = [
   {
+    id: 'decentralized-cleanup',
+    name: 'Decentralized Cleanup',
+    event: 'Open Source',
+    date: '2024',
+    description: 'Environmental blockchain initiative for waste management and community cleanup coordination.',
+    techStack: ['Web3', 'Smart Contracts', 'Community'],
+    link: 'https://github.com',
+  },
+  {
     id: '12h-finance',
     name: '12h.finance',
     event: 'StarkHack (ETHGlobal)',

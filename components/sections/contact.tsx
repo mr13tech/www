@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react'
+import { Github, Linkedin, Twitter, Mail, Phone } from 'lucide-react'
 import { EthSectionBg } from '@/components/eth-section-bg'
 import { containerVariants, itemVariants } from '@/lib/animations'
 
@@ -31,6 +31,13 @@ const CONTACTS = [
     icon: Twitter,
     value: '@mr13tech',
     link: 'https://twitter.com/mr13tech',
+    external: true,
+  },
+  {
+    label: 'Phone',
+    icon: Phone,
+    value: '+380932610010',
+    link: 'https://t.me/+380932610010',
     external: true,
   },
 ]
@@ -98,7 +105,7 @@ export const ContactSection = () => {
 
         {/* Copyright */}
         <div className="text-center text-xs text-zinc-500 pt-6 border-t border-white/10 w-full">
-          <p>&copy; 2025 Pylyp Radionov. All rights reserved.</p>
+          <p>&copy; 2026 Pylyp Radionov. All rights reserved.</p>
         </div>
       </motion.div>
     </section>

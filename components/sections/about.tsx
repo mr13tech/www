@@ -1,7 +1,5 @@
 'use client'
 
-import { getTimeDiffLabel } from '@/lib/timezone'
-
 export const AboutSection = () => {
   return (
     <div className="flex w-full max-w-[588px] flex-col gap-4 lg:max-w-[1024px]">
@@ -37,20 +35,20 @@ const PersonalInfo = () => (
   <div className="flex min-h-[373px] w-full flex-col items-start justify-between rounded-3xl bg-black text-start text-sm font-medium text-white lg:w-[504px] lg:text-xl xl:max-w-[504px]">
     <div id="name" className="flex flex-col gap-2 p-6">
       <p className="text-2xl lg:text-4xl">Pylyp Radionov</p>
-      <p className="opacity-50">software engineer</p>
+      <p className="opacity-50">fullstack engineer & product architect</p>
     </div>
     <div id="details" className="flex flex-col gap-2 p-6">
       <div className="flex">
-        <p className="opacity-50">origin:</p>
-        <p className="whitespace-pre"> UA Odesa</p>
+        <p className="opacity-50">focus:</p>
+        <p className="whitespace-pre"> AI-augmented engineering & blockchain</p>
       </div>
       <div className="flex">
-        <p className="opacity-50">locale:</p>
-        <p className="whitespace-pre"> TH {getTimeDiffLabel()} from You!</p>
+        <p className="opacity-50">approach:</p>
+        <p className="whitespace-pre"> Spec-Driven Development</p>
       </div>
       <div className="flex">
-        <p className="opacity-50">mypath:</p>
-        <p className="whitespace-pre"> family, peers, freedom</p>
+        <p className="opacity-50">based:</p>
+        <p className="whitespace-pre"> Remote (Europe Timezones)</p>
       </div>
     </div>
   </div>

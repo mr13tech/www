@@ -11,9 +11,9 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Pylyp Radionov - Full Stack Web3 Engineer',
+  title: 'Pylyp Radionov - Fullstack Engineer & Product Architect',
   description:
-    'Software engineer specialized in blockchain, smart contracts, and Web3. Portfolio showcasing experience in DeFi, chain data ETL, and technical leadership.',
+    'Fullstack engineer with 7+ years in blockchain, big data, and AI-augmented engineering. From low-level C++ protocol optimization to high-conversion React frontends.',
 }
 
 export default function RootLayout({

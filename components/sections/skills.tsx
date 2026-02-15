@@ -1,13 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Zap, Code2, Database, Users2 } from 'lucide-react'
+import { Zap, Code2, Database, Users2, Brain } from 'lucide-react'
 import { skillCategories } from '@/data/skills'
 import { SkillPill } from '@/components/ui/skill-pill'
 import { EthSectionBg } from '@/components/eth-section-bg'
 import { containerVariants, itemVariants } from '@/lib/animations'
 
 const iconMap = {
+  Brain,
   Zap,
   Code2,
   Database,
@@ -16,6 +17,7 @@ const iconMap = {
 
 // Category-specific accent colors
 const categoryColors: Record<string, string> = {
+  'ai-workflows': '#a78bfa',
   'web3-blockchain': '#b3d574',
   'languages-frameworks': '#24b391',
   'data-infrastructure': '#6b9fff',
@@ -39,7 +41,7 @@ export const SkillsSection = () => {
             Skills & Expertise
           </h2>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-zinc-400">
-            Specialized in Web3, blockchain infrastructure, and technical leadership
+            Full-stack engineering, AI-augmented workflows, and blockchain infrastructure
           </p>
         </motion.div>
 

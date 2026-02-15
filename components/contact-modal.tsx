@@ -110,7 +110,7 @@ export const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
               {/* Footer */}
               <div className="mt-6 pt-4 border-t border-white/10">
-                <p className="text-xs text-zinc-500 text-center">© 2025 Pylyp Radionov</p>
+                <p className="text-xs text-zinc-500 text-center">© 2026 Pylyp Radionov</p>
               </div>
             </div>
           </motion.div>

@@ -80,7 +80,7 @@ export const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-zinc-400 text-center font-light">
-            Fullstack Engineer · 7+ Years Web3 & Blockchain
+            Fullstack Engineer & Product Architect · 7+ Years
           </p>
         </motion.div>
 

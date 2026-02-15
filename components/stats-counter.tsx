@@ -12,7 +12,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { label: 'Years Experience', value: '7', prefix: '+' },
+  { label: 'Years Experience', value: '8', prefix: '+' },
   { label: 'Projects Shipped', value: '20', prefix: '+' },
   { label: 'Hackathon Wins', value: '1' },
 ]

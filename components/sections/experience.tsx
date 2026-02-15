@@ -26,7 +26,7 @@ export const ExperienceSection = () => {
             Experience
           </h2>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-zinc-400">
-            Journey through Web3, blockchain, and technical leadership
+            Blockchain, product architecture, and AI-augmented delivery
           </p>
         </motion.div>
 

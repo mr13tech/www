@@ -30,7 +30,7 @@ const achievements: AchievementCard[] = [
   {
     icon: <Users className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: 'Technical Leadership',
-    description: 'CTO & Lead Architect roles managing engineering teams',
+    description: 'CTO at Copernic Space, Product Engineer at SmartMerchant — owning product outcomes and mentoring engineers',
     highlight: 'Led teams of 3-5 engineers across distributed timezones',
   },
   {
@@ -59,7 +59,7 @@ export const ImpactSection = () => {
             Impact & Achievements
           </h2>
           <p className="text-lg sm:text-xl text-zinc-400">
-            Proven track record of building innovative blockchain solutions
+            Shipping production systems from protocol layer to product
           </p>
         </motion.div>
 
@@ -111,11 +111,11 @@ export const ImpactSection = () => {
         >
           <h3 className="text-lg sm:text-xl font-bold text-zinc-50 mb-4">Full-Stack Expertise</h3>
           <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">
-            From low-level protocol optimization (Yul/Assembly) to user-facing React frontends.
-            Experienced across the entire blockchain stack: smart contract development, ETL
-            pipelines processing petabytes of blockchain data, graph databases for compliance
-            analysis, and modern Web3 frontend architectures. Comfortable building from first
-            principles and shipping production systems that scale.
+            From low-level C++ protocol optimization to high-conversion React frontends.
+            Currently focused on AI-augmented engineering — using Spec-Driven Development
+            and agentic coding tools to accelerate architecture and delivery. Experienced
+            across the entire stack: smart contracts, ZK circuits, ETL pipelines processing
+            petabytes of blockchain data, and modern frontend architectures.
           </p>
         </motion.div>
       </div>
