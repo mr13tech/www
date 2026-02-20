@@ -1,10 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Twitter, Mail, Phone, Download, FileText } from 'lucide-react'
+import { Github, Linkedin, Twitter, Mail, Phone, FileText, FileDown } from 'lucide-react'
 import { EthSectionBg } from '@/components/eth-section-bg'
 import { containerVariants, itemVariants } from '@/lib/animations'
-import { useState } from 'react'
 
 const CONTACTS = [
   {
@@ -44,30 +43,6 @@ const CONTACTS = [
 ]
 
 export const ContactSection = () => {
-  const [showCVMenu, setShowCVMenu] = useState(false)
-
-  const handleDownloadMD = async () => {
-    try {
-      const response = await fetch('/Pylyp_Radionov_CV.md')
-      const text = await response.text()
-
-      const blob = new Blob([text], { type: 'text/markdown' })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'Pylyp_Radionov_CV.md'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
-    } catch (error) {
-      console.error('Failed to download CV:', error)
-    }
-  }
-
-  const handleViewCV = () => {
-    window.open('/Pylyp_Radionov_CV.md', '_blank')
-  }
 
   return (
     <section
@@ -106,30 +81,33 @@ export const ContactSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <motion.button
-            onClick={handleDownloadMD}
+          <motion.a
+            href="/Pylyp-Radionov-CV.pdf"
+            download="Pylyp-Radionov-CV.pdf"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-[#b3d574] to-[#24b391] text-zinc-950 font-bold text-base overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#b3d574]/30 transition-all duration-300"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#24b391] to-[#b3d574] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="relative z-10 flex items-center gap-3">
-              <Download className="w-5 h-5" />
-              Download CV (.md)
+              <FileDown className="w-5 h-5" />
+              Download CV (PDF)
             </span>
-          </motion.button>
+          </motion.a>
 
-          <motion.button
-            onClick={handleViewCV}
+          <motion.a
+            href="/Pylyp-Radionov-CV.md"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="group px-8 py-4 rounded-xl border-2 border-[#b3d574]/50 hover:border-[#b3d574] bg-transparent hover:bg-[#b3d574]/10 text-zinc-50 font-bold text-base transition-all duration-300"
           >
             <span className="flex items-center gap-3">
               <FileText className="w-5 h-5" />
-              View CV
+              View CV (.md)
             </span>
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Contact links */}

@@ -30,7 +30,7 @@ export const StatsCounter = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.3 }}
-      className="flex items-center rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm divide-x divide-white/10 w-full"
+      className="flex flex-col sm:flex-row items-center rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm sm:divide-x divide-y sm:divide-y-0 divide-white/10 w-full"
     >
       {stats.map((stat, index) => (
         <div

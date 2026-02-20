@@ -1,38 +1,12 @@
 'use client'
 
-import { Download, FileText } from 'lucide-react'
+import { Download, FileText, FileDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 export const DownloadCVButton = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
-
-  const handleDownloadMD = async () => {
-    try {
-      const response = await fetch('/Pylyp_Radionov_CV.md')
-      const text = await response.text()
-
-      // Create a blob and download
-      const blob = new Blob([text], { type: 'text/markdown' })
-      const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'Pylyp_Radionov_CV.md'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      URL.revokeObjectURL(url)
-      setShowMenu(false)
-    } catch (error) {
-      console.error('Failed to download CV:', error)
-    }
-  }
-
-  const handleViewCV = () => {
-    window.open('/Pylyp_Radionov_CV.md', '_blank')
-    setShowMenu(false)
-  }
 
   return (
     <div className="fixed bottom-6 right-6 z-floating">
@@ -45,20 +19,25 @@ export const DownloadCVButton = () => {
             exit={{ opacity: 0, y: 10 }}
             className="absolute bottom-full mb-3 right-0 flex flex-col gap-2 min-w-[180px]"
           >
-            <button
-              onClick={handleViewCV}
+            <a
+              href="/Pylyp-Radionov-CV.pdf"
+              download="Pylyp-Radionov-CV.pdf"
+              onClick={() => setShowMenu(false)}
+              className="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-zinc-900/95 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 text-zinc-100 hover:text-[#b3d574] transition-all text-sm font-medium"
+            >
+              <FileDown className="w-4 h-4" />
+              Download PDF
+            </a>
+            <a
+              href="/Pylyp-Radionov-CV.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setShowMenu(false)}
               className="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-zinc-900/95 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 text-zinc-100 hover:text-[#b3d574] transition-all text-sm font-medium"
             >
               <FileText className="w-4 h-4" />
-              View CV
-            </button>
-            <button
-              onClick={handleDownloadMD}
-              className="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-zinc-900/95 backdrop-blur-sm border border-white/10 hover:border-[#b3d574]/50 text-zinc-100 hover:text-[#b3d574] transition-all text-sm font-medium"
-            >
-              <Download className="w-4 h-4" />
-              Download .md
-            </button>
+              View CV (.md)
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

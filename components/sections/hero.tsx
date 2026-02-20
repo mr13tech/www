@@ -24,12 +24,12 @@ export const HeroSection = () => {
   }, [prefersReducedMotion])
 
   return (
-    <section id="hero" className="snap-start snap-always w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-12 sm:py-16 md:py-20 overflow-hidden relative" style={{ minHeight: 'var(--viewport-height, 100vh)' }}>
+    <section id="hero" className="snap-start snap-always w-full flex flex-col items-center justify-center md:justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 sm:py-12 md:py-20 overflow-hidden relative" style={{ minHeight: 'var(--viewport-height, 100vh)' }}>
       <EthSectionBg />
 
       {/* Content */}
       <motion.div
-        className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:flex-row md:items-center md:justify-center md:gap-10 lg:gap-14 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10"
+        className="flex flex-col items-center justify-center gap-3 sm:gap-4 md:flex-row md:items-center md:justify-center md:gap-10 lg:gap-14 max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl w-full relative z-10"
         variants={heroVariants}
         initial="hidden"
         animate="visible"
@@ -37,7 +37,7 @@ export const HeroSection = () => {
         {/* Profile Image with parallax */}
         <motion.div
           ref={imageRef}
-          className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-52 md:h-52 lg:w-60 lg:h-60 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72 will-change-transform flex-shrink-0"
+          className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-52 md:h-52 lg:w-60 lg:h-60 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72 will-change-transform flex-shrink-0"
           variants={heroItemVariants}
         >
           <div className="absolute inset-0 w-full h-full pointer-events-none z-10">
@@ -105,8 +105,21 @@ export const HeroSection = () => {
             </p>
           </div>
 
-          <StatsCounter />
+          {/* Stats - desktop only (inline) */}
+          <div className="hidden md:block w-full">
+            <StatsCounter />
+          </div>
         </motion.div>
+      </motion.div>
+
+      {/* Stats - mobile only (bottom) */}
+      <motion.div
+        className="md:hidden w-full max-w-sm px-4 mt-auto pb-16 relative z-10"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.4 }}
+      >
+        <StatsCounter />
       </motion.div>
 
       {/* Scroll indicator - hidden on mobile */}

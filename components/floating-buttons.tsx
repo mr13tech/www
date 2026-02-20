@@ -3,12 +3,10 @@
 import { Download, Mail, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { ContactModal } from '@/components/contact-modal'
 
 export const FloatingButtons = () => {
   const [isVisible, setIsVisible] = useState(true)
   const [showScrollTop, setShowScrollTop] = useState(false)
-  const [showContactModal, setShowContactModal] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +28,6 @@ export const FloatingButtons = () => {
       setShowScrollTop(!onHero)
 
       // Only hide Contact and CV buttons when contact section is visible
-      // But always show scroll to top if not on hero
       const onContact = contactRect.top <= windowHeight * 0.2
       setIsVisible(!onContact)
     }
@@ -66,7 +63,8 @@ export const FloatingButtons = () => {
     >
       {/* Button Stack */}
       <div className="flex flex-col gap-3">
-        {/* Scroll to Top - Show when not on hero */}
+        {/* Scroll to Top - Show when not on hero, desktop only */}
+        <div className="hidden md:block">
         <AnimatePresence>
           {showScrollTop && (
             <motion.button
@@ -87,15 +85,16 @@ export const FloatingButtons = () => {
             </motion.button>
           )}
         </AnimatePresence>
+        </div>
 
         {/* Contact and CV Buttons - desktop only, hide on contact section */}
         <div className="hidden md:flex flex-col gap-3">
         <AnimatePresence>
           {isVisible && (
             <>
-              {/* Contact Button */}
+              {/* Contact Button - scrolls to contact section */}
               <motion.button
-                onClick={() => setShowContactModal(true)}
+                onClick={scrollToContact}
                 className="group relative pointer-events-auto"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -111,9 +110,10 @@ export const FloatingButtons = () => {
                 </div>
               </motion.button>
 
-              {/* Download CV Button - Scrolls to contact */}
-              <motion.button
-                onClick={scrollToContact}
+              {/* Download CV Button - direct PDF download */}
+              <motion.a
+                href="/Pylyp-Radionov-CV.pdf"
+                download="Pylyp-Radionov-CV.pdf"
                 className="group relative pointer-events-auto"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -127,17 +127,12 @@ export const FloatingButtons = () => {
                 <div className="relative w-12 h-12 rounded-full bg-gradient-to-r from-[#b3d574] to-[#24b391] flex items-center justify-center text-zinc-950 shadow-lg">
                   <Download className="w-5 h-5" />
                 </div>
-              </motion.button>
+              </motion.a>
             </>
           )}
         </AnimatePresence>
         </div>
       </div>
-
-      <ContactModal
-        isOpen={showContactModal}
-        onClose={() => setShowContactModal(false)}
-      />
     </motion.div>
   )
 }
