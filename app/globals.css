@@ -47,6 +47,7 @@
 }
 
 :root {
+  --mobile-nav-height: calc(3.5rem + env(safe-area-inset-bottom, 0px));
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -142,7 +143,6 @@
   .z-sticky { z-index: 3; }
   .z-nav { z-index: 40; }
   .z-floating { z-index: 50; }
-  .z-cursor { z-index: 60; }
   .z-modal-backdrop { z-index: 70; }
   .z-modal { z-index: 80; }
   .z-toast { z-index: 90; }
@@ -168,6 +168,13 @@
 
   .bottom-nav-safe {
     bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Mobile-only bottom padding to clear fixed nav bar */
+  @media (max-width: 767px) {
+    .pb-mobile-nav {
+      padding-bottom: var(--mobile-nav-height);
+    }
   }
 
   /* Body scroll lock for modals */

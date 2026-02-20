@@ -16,7 +16,7 @@ export const ExperienceSection = () => {
       </div>
 
       <div className="relative z-10 h-full overflow-y-auto overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-      <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7 lg:gap-7 xl:gap-7 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8">
+      <div className="max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6 md:gap-7 lg:gap-7 xl:gap-7 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 pb-mobile-nav">
         {/* Section Title */}
         <motion.div
           className="flex flex-col gap-1 sm:gap-2"

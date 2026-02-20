@@ -44,7 +44,7 @@ const achievements: AchievementCard[] = [
 
 export const ImpactSection = () => {
   return (
-    <section id="impact" className="snap-start snap-always min-h-screen-safe w-full flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 relative overflow-hidden">
+    <section id="impact" className="snap-start snap-always min-h-screen-safe w-full flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-10 lg:py-8 xl:py-8 relative overflow-hidden pb-mobile-nav">
       <EthSectionBg />
 
       <div className="max-w-5xl w-full relative z-10">

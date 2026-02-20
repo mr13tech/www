@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Roboto_Mono } from 'next/font/google'
-import { CustomCursor } from '@/components/cursor'
 import './globals.css'
 
 const robotoMono = Roboto_Mono({
@@ -30,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`${robotoMono.className} h-full bg-zinc-950`}>
-        <CustomCursor />
         {children}
       </body>
     </html>

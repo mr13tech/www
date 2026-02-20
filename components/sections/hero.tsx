@@ -24,7 +24,7 @@ export const HeroSection = () => {
   }, [prefersReducedMotion])
 
   return (
-    <section id="hero" className="snap-start snap-always w-full flex flex-col items-center justify-center md:justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 sm:py-12 md:py-20 overflow-hidden relative" style={{ minHeight: 'var(--viewport-height, 100vh)' }}>
+    <section id="hero" className="snap-start snap-always min-h-screen-safe w-full flex flex-col items-center justify-center md:justify-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 sm:py-12 md:py-20 overflow-hidden relative pb-mobile-nav">
       <EthSectionBg />
 
       {/* Content */}
@@ -114,7 +114,7 @@ export const HeroSection = () => {
 
       {/* Stats - mobile only (bottom) */}
       <motion.div
-        className="md:hidden w-full max-w-sm px-4 mt-auto pb-16 relative z-10"
+        className="md:hidden w-full max-w-sm px-4 mt-auto relative z-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.4 }}
